@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: trading-bot
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python trading_bot.py
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        value: 8308327816:AAGXlx_nDEy63AsZKVKEza5iItmCpauRkPE
+      - key: TELEGRAM_CHAT_ID
+        value: 5969642968
+      - key: MT5_ACCOUNT
+        value: 232128229
+      - key: MT5_PASSWORD
+        value: @Mardan115
+      - key: MT5_SERVER
+        value: Exness-MT5Server
